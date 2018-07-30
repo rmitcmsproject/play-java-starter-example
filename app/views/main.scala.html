@@ -1,23 +1,23 @@
-
-<div class="container">
+<div>
+<div class="container" ng-controller="loginController">
   <div class="card"></div>
   <div class="card">
     <h1 class="title">Login</h1>
     <form>
       <div class="input-container">
-        <input type="#{type}" id="#{label}" required="required"/>
-        <label for="#{label}">Username</label>
+        <input type="text" ng-model="user.name" required="required" />
+        <label>Username</label>
         <div class="bar"></div>
       </div>
       <div class="input-container">
-        <input type="#{type}" id="#{label}" required="required"/>
-        <label for="#{label}">Password</label>
+        <input type="password" ng-model="user.pass" required="required"/>
+        <label>Password</label>
         <div class="bar"></div>
       </div>
       <div class="button-container">
-        <button><span>Go</span></button>
+        <button ng-click=""><span>Go</span></button>
       </div>
-      <div class="footer"><a href="#">Forgot your password?</a></div>
+      <div class="footer"><a href="#" ng-click="">Forgot your password?</a></div>
     </form>
   </div>
   <div class="card alt">
@@ -27,28 +27,27 @@
     </h1>
     <form>
       <div class="input-container">
-        <input type="#{type}" id="#{label}" required="required"/>
+        <input type="text"  required="required"/>
         <label for="#{label}">Username</label>
         <div class="bar"></div>
       </div>
       <div class="input-container">
-        <input type="#{type}" id="#{label}" required="required"/>
+        <input type="password"  required="required"/>
         <label for="#{label}">Password</label>
         <div class="bar"></div>
       </div>
       <div class="input-container">
-        <input type="#{type}" id="#{label}" required="required"/>
+        <input type="password"  required="required"/>
         <label for="#{label}">Repeat Password</label>
         <div class="bar"></div>
       </div>
       <div class="button-container">
-        <button><span>Next</span></button>
+        <button ng-click=""><span>Next</span></button>
       </div>
     </form>
   </div>
-</div>
 
-
-<script src="/assets/javascripts/hello.js"></script>
+<script src="/assets/javascripts/login.js"></script>
 <link rel="stylesheet" href="/assets/stylesheets/main.css">
-
+</div>
+</div>
