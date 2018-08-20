@@ -20,7 +20,7 @@ to insert into the body of the page. *@ @(title: String)(content: Html)
 </head>
 <body ng-app="myApp">
  <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
+  <div class="modal fade" id="myModal" role="dialog" ng-if="modal.type">
     <div class="modal-dialog">
     
       <!-- Modal content-->
