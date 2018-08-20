@@ -1,20 +1,20 @@
 <div>
-<div class="container" ng-controller="loginController">
+<div class="mycontainer" ng-controller="loginController" ng-cloak>
   <div class="card"></div>
   <div class="card">
-    <h1 class="title">Login</h1>
+    <h1 class="title">{{title}}</h1>
     <form>
-      <div class="input-container">
+      <div class="myinput-mycontainer">
         <input type="text" ng-model="user.name" required="required" />
         <label>Username</label>
         <div class="bar"></div>
       </div>
-      <div class="input-container">
+      <div class="myinput-mycontainer">
         <input type="password" ng-model="user.pass" required="required"/>
         <label>Password</label>
         <div class="bar"></div>
       </div>
-      <div class="button-container">
+      <div class="button-mycontainer">
         <button ng-click=""><span>Go</span></button>
       </div>
       <div class="footer"><a href="#" ng-click="">Forgot your password?</a></div>
@@ -26,23 +26,39 @@
       <div class="close"></div>
     </h1>
     <form>
-      <div class="input-container">
-        <input type="text"  required="required"/>
+      <div class="myinput-mycontainer">
+        <input type="text" ng-model="user.ID" required="required"/>
         <label for="#{label}">Username</label>
         <div class="bar"></div>
       </div>
-      <div class="input-container">
-        <input type="password"  required="required"/>
+      <div class="myinput-mycontainer">
+        <input type="password" ng-model="user.pass" required="required"/>
         <label for="#{label}">Password</label>
         <div class="bar"></div>
       </div>
-      <div class="input-container">
-        <input type="password"  required="required"/>
+      <div class="myinput-mycontainer">
+        <input type="password" ng-model="user.passConfirm" required="required"/>
         <label for="#{label}">Repeat Password</label>
         <div class="bar"></div>
       </div>
-      <div class="button-container">
-        <button ng-click=""><span>Next</span></button>
+   
+       <div class="myinput-mycontainer">
+       <label >Select Role: Student</label><br>
+        <input type="radio" ng-model="user.role" name="role" value="STU" required="required"/>
+        
+      </div>
+       <div class="myinput-mycontainer">
+       <label >Program Coordinator</label><br>
+        <input type="radio" ng-model="user.role" name="role" value="PCD" required="required"/>
+        
+      </div>
+       <div class="myinput-mycontainer">
+       <label >Lecturer</label><br>
+        <input type="radio" ng-model="user.role" name="role" value="LEC" required="required"/>
+        
+      </div>
+      <div class="button-mycontainer">
+        <button ng-click="register()"><span>REGISTER</span></button>
       </div>
     </form>
   </div>
